@@ -1,5 +1,13 @@
 #include <stdio.h>
 
+int buscabinaria(){
+
+    printf("busca binaria");
+    
+}
+
+
+
 int main (){
 
 int num_emb=0;

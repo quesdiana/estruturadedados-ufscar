@@ -1,12 +1,22 @@
 #include <stdio.h>
 
-int buscabinaria(){
+int buscabinaria(int key, int inicio, int fim, int lista[]){
 
-    printf("busca binaria");
+   int meio = (fim-inicio)/2;
+   int resto = (fim-inicio)%2;
+   
+   if(meio==0) return(-1);
+   
+   if(lista[meio]==key) return(lista[meio]);
+
+   if(lista[meio]<key){
+    return buscabinaria(key, meio+1, fim, lista);
+   } else {
+    return buscabinaria(key, inicio, meio, lista);
+   }
+   
     
 }
-
-
 
 int main (){
 

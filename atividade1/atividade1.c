@@ -43,41 +43,7 @@ for(int i=0; i<num_gar; i++){
 
 
 int mantem1=0, mantem2=0, aux=0;
-
-while (mantem1==0){
-
-   mantem1=1;
-
-for(int i=0; i < num_gar; i++){
-
-if(tam_gar[i]>tam_gar[i+1]){
-   mantem1=0;
-    aux=tam_gar[i+1];
-    tam_gar[i+1]=tam_gar[i];
-    tam_gar[i]=aux;
-
-    }
-  }
-
-}
-
-while (mantem2==0){
-
-   mantem2=1;
-
-for(int i=0; i < num_emb; i++){
-
-if(tam_emb[i]>tam_emb[i+1]){
-   mantem2=0;
-    aux=tam_emb[i+1];
-    tam_emb[i+1]=tam_emb[i];
-    tam_emb[i]=aux;
-
-    }
-  }
-
-}
-
+	
 
 for(int i=0; i < num_gar; i++){
 
@@ -86,14 +52,7 @@ for(int i=0; i < num_gar; i++){
 
     int embalagem_sugerida=-1;
 
-    for(int j=0; j < num_emb; j++){
-
-        if(garrafa_atual<=tam_emb[j]){
-            embalagem_sugerida=tam_emb[j];
-            break;
-        }
-
-    }
+	
 
     if(embalagem_sugerida==-1){
         printf("descartar\n", garrafa_atual);

@@ -13,11 +13,7 @@ for(int i=0; i<num_emb; i++){
 
 }
 
-// for(int i=0; i<num_emb; i++){
 
-//     printf("%d ", tam_emb[i]);
-
-// }
 
 printf("\n");
 
@@ -32,11 +28,7 @@ for(int i=0; i<num_gar; i++){
 
 }
 
-// for(int i=0; i<num_gar; i++){
 
-//     printf("%d ", tam_gar[i]);
-
-// }
 
 int mantem1=0, mantem2=0, aux=0;
 

@@ -1,11 +1,12 @@
 #include <stdio.h>
 
+
 int main (){
 
 int num_emb=0;
 scanf("%d", &num_emb);
 
-int tam_emb[num_emb];
+int tam_emb[num_emb], tam_emb2[num_emb];
 
 for(int i=0; i<num_emb; i++){
 
@@ -13,20 +14,31 @@ for(int i=0; i<num_emb; i++){
 
 }
 
+for(int i=0; i<num_emb; i++){
+
+   tam_emb2[i]=tam_emb[i];
+
+}
 
 
-printf("\n");
 
 int num_gar=0;
 scanf("%d", &num_gar);
 
-int tam_gar[num_gar];
+int tam_gar[num_gar], tam_gar2[num_gar];
 
 for(int i=0; i<num_gar; i++){
 
     scanf("%d", &tam_gar[i]);
 
 }
+
+for(int i=0; i<num_gar; i++){
+
+    tam_gar2[i]=tam_gar[i];
+
+}
+
 
 
 
@@ -66,29 +78,11 @@ if(tam_emb[i]>tam_emb[i+1]){
 
 }
 
-printf("\n");
-
-for(int i=0; i<num_gar; i++){
-
-    printf("%d ", tam_gar[i]);
-
-}
-
-printf("\n");
-
-for(int i=0; i<num_emb; i++){
-
-    printf("%d ", tam_emb[i]);
-
-}
-
-printf("\n");
 
 for(int i=0; i < num_gar; i++){
 
-    int garrafa_atual=tam_gar[i];
+    int garrafa_atual=tam_gar2[i];
 
-    printf("analisando garrafas de tamanho %d\n", garrafa_atual);
 
     int embalagem_sugerida=-1;
 
@@ -102,15 +96,12 @@ for(int i=0; i < num_gar; i++){
     }
 
     if(embalagem_sugerida==-1){
-        printf("%d descartar\n", garrafa_atual);
+        printf("descartar\n", garrafa_atual);
     } else {
-        printf("%d %d\n", garrafa_atual, embalagem_sugerida);
+        printf("%d\n", embalagem_sugerida);
     }
 
 }
-
-
-
 
     return(0);
 }
